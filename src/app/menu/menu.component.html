@@ -1,0 +1,24 @@
+<mat-toolbar>
+    <div>
+  
+      <button mat-button [matMenuTriggerFor]="aboveMenu"><h3>Cadastro</h3></button>
+      <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item routerLink="/cadastrolivros" >Livro</button>
+        <button mat-menu-item routerLink="/cadastrocategorias" >Categoria</button>
+      </mat-menu>
+  
+      <button mat-button [matMenuTriggerFor]="belowMenu"><h3>Itens</h3></button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item routerLink="/listlivros" >Livros</button>
+        <button mat-menu-item routerLink="/listcategorias" >Categorias</button>
+      </mat-menu>
+          
+    </div>
+  
+    <div class="centro-custo">
+      <button type="button" class="btn btn-outline-danger" routerLink="/menu">
+        Sair
+      </button>
+    </div>
+  
+  </mat-toolbar>

@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+
+<mat-card>
+
+  <div class="livros">
+    <h2>Livros</h2>
+
+    <table class="table">
+
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Categorias</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let livro of livros" >
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.titulo }}</td>
+            <td>{{ livro.ano }}</td>
+            <td>{{ livro.categorias }}</td>
+            <td>
+              <div class="button-group">
+                <button type="button" class="btn btn-outline-success" routerLink="/">
+                  Editar
+                </button>
+  
+                <button type="button" class="btn btn-outline-danger" routerLink="/">
+                  Deletar
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+  </div>
+
+</mat-card>

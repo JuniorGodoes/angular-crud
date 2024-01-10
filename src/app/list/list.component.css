@@ -1,0 +1,14 @@
+mat-card{
+    margin: 50px;
+}
+
+.livros{
+    padding: 20px;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    float: right;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceApiService } from '../service/service-api.service';
 import { map } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class CadastroLivrosComponent implements OnInit{
 
   
   constructor(
-    private service: ServiceApiService
+    private service: ServiceApiService,
+    private route: ActivatedRoute
   ){}
 
   categorias:any = []
@@ -58,9 +60,6 @@ export class CadastroLivrosComponent implements OnInit{
     alert('Cadastrado')
   }
 
-  Editar(){
-    
-  }
 
 
 }

@@ -25,11 +25,11 @@
             <td>{{ livro.categorias }}</td>
             <td>
               <div class="button-group">
-                <button type="button" class="btn btn-outline-success" routerLink="/">
+                <button type="button" class="btn btn-outline-success" (click)="Editar(livro)">
                   Editar
                 </button>
   
-                <button type="button" class="btn btn-outline-danger" routerLink="/">
+                <button type="button" class="btn btn-outline-danger" (click)="Delete(livro.id)">
                   Deletar
                 </button>
               </div>

@@ -19,6 +19,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
+import { EditarLivrosComponent } from './editar-livros/editar-livros.component';
+import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {FormsModule} from '@angular/forms';
     ListComponent,
     ListCategoriasComponent,
     CadastroLivrosComponent,
-    CadastroCategoriasComponent
+    CadastroCategoriasComponent,
+    EditarLivrosComponent,
+    EditarCategoriasComponent
   ],
   imports: [
     BrowserModule,

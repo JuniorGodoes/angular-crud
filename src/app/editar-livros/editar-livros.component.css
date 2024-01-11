@@ -1,0 +1,29 @@
+mat-card{
+    margin: 50px;
+  }
+  
+  .livros{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .button-group{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    float: right;
+  }
+  
+  button{
+    float: right;
+  }
+  
+  .categoria-option{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  

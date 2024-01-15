@@ -21,6 +21,7 @@ import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import { EditarLivrosComponent } from './editar-livros/editar-livros.component';
 import { EditarCategoriasComponent } from './editar-categorias/editar-categorias.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,9 @@ import { EditarCategoriasComponent } from './editar-categorias/editar-categorias
     MenuComponent,
     ListComponent,
     ListCategoriasComponent,
-    CadastroLivrosComponent,
     CadastroCategoriasComponent,
     EditarLivrosComponent,
+    CadastroLivrosComponent,
     EditarCategoriasComponent
   ],
   imports: [
@@ -45,7 +46,8 @@ import { EditarCategoriasComponent } from './editar-categorias/editar-categorias
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [
     ServiceApiService

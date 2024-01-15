@@ -2,42 +2,41 @@
 
 <mat-card>
 
-  <div class="livros">
+  <div class="livros" [formGroup]="novolivro">
     <h2>Cadastro Livros</h2>
 
 
         <div>
             <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="Titulo" [(ngModel)]="titulo" >
+                <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo">
               </div>
         </div>
 
         <div>
             <div class="input-group flex-nowrap">
-                <input type="text" class="form-control" placeholder="Ano"  [(ngModel)]="ano" >
+                <input type="text" class="form-control" placeholder="Ano" formControlName="ano" >
               </div>
         </div>
 
-        <div class="categoria-option">
-            <select class="form-select" aria-label="Default select example" #novacategoria>
-                <option *ngFor="let categoria of categorias" >{{categoria.name}}</option>
+        <div *ngFor="let alias of categorias.controls; let i=index" class="button-group">
 
-              </select>
-              <button type="button" class="btn btn-outline-success" (click)="addnovacategoria(novacategoria.value)">
+                <select formControlName="state" [formControl]="getformControl(i)" class="form-select" >
+                    <option *ngFor="let categoria of todascategorias" [value]="categoria.name">
+                    {{ categoria.name }}
+                    </option>
+                </select>
+
+
+            <button type="button" class="btn btn-outline-success" (click)="addAlias()">
                 Add
             </button>
+
         </div>
 
-        <div>
-            <h3>Categorias :</h3>
-            <ul>
-                <li *ngFor="let categoria of novascategorias">{{categoria}}</li>
-            </ul>
-        </div>
 
         <div>
             <button type="button" class="btn btn-outline-success" (click)="Cadastrar()">
-                Cadastrar
+                teste
             </button>
         </div>
 
